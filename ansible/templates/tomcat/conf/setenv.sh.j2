@@ -27,6 +27,7 @@ export CATALINA_OPTS="$CATALINA_OPTS
                       -Dcom.sun.xml.bind.v2.bytecode.ClassTailor.noOptimize=true
                       -Dcom.sun.management.jmxremote=true
                       -Dcom.sun.management.jmxremote.authenticate=false
+                      -Dcom.sun.management.jmxremote.host=${JVM_JMX_REMOTE_HOST_IP:-{{jvm_jmx_remote_host_ip}}}
                       -Dcom.sun.management.jmxremote.port=${JVM_JMX_PORT:-{{ jvm_jmx_port }}}
                       -Dcom.sun.management.jmxremote.rmi.port=${JVM_JMX_PORT:-{{ jvm_jmx_port }}}
                       -Dcom.sun.management.jmxremote.ssl=false
